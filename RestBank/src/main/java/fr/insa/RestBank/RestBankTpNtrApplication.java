@@ -1,13 +1,14 @@
-package fr.insa.bank;
+package fr.insa.RestBank;
 
+import fr.insa.RestBank.models.Client;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BankProjectApplication {
+public class RestBankTpNtrApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BankProjectApplication.class, args);
+		SpringApplication.run(RestBankTpNtrApplication.class, args);
 	}
 
 }
