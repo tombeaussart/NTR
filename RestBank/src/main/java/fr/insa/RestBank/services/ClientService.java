@@ -29,5 +29,4 @@ public class ClientService {
         else
             throw new MyExecutionException("Transaction failed");
     }
-
 }

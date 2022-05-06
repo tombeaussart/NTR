@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 public class CommonRessource {
 
     @ExceptionHandler(MyExecutionException.class)
-    public ResponseEntity<StatusTransaction> handleExecutionException(MyExecutionException ex) {
+    public ResponseEntity<String> handleExecutionException(MyExecutionException ex) {
         return ResponseEntity
                 .status(HttpStatus.BAD_REQUEST)
-                .body(new StatusTransaction(0));
+                .body(ex.getMessage());
     }
 }
