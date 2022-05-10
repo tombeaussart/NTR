@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./style/index.scss";
+
+export const UserContext = React.createContext();
 
 function App() {
+  const [panier, setPanier] = useState(false);
+  const [listProducts, setListeProducts] = useState([]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <UserContext.Provider>
+        <div className="title">
+          <div className="title-first" onClick={() => setPanier(false)}>
+            Web<div className="title-second">Client</div>
+          </div>
+          <div className="panierButton" onClick={() => setPanier(true)}>
+            {listProducts.length}
+            <img src="cart.png" alt="cart"></img>
+          </div>
+        </div>
+        <div className="content">
+          
+        </div>
+      </UserContext.Provider>
     </div>
   );
 }
