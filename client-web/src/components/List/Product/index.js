@@ -8,6 +8,7 @@ const Product = ({ dataProduct }) => {
 
     const handleClickPlus = () => {
         context.setPanier(oldPanier => [...oldPanier, dataProduct.id]);
+        context.setTotal(context.total + dataProduct.prix);
     };
 
     const handleClickMoins = () => {
@@ -19,6 +20,7 @@ const Product = ({ dataProduct }) => {
         }
         console.log(arr);
         context.setPanier(arr);
+        context.setTotal(context.total - dataProduct.prix);
     };
 
     return (

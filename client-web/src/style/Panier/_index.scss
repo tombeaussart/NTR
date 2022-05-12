@@ -1,0 +1,57 @@
+.PanierContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-height: 595px;
+    overflow-y: auto;
+
+    .titlePanier{
+        font-size: xx-large;
+        text-align: center;
+        margin-top: 2%;
+        background: $main-gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .total{
+        color: white;
+        font-size: large;
+        margin-top: 2%;
+    }
+
+    .buy{
+        padding: 2%;
+        border-radius: 4px;
+        margin-top: 2%;
+        align-items: center;
+        background: $main-gradient;
+        color: white;
+        font-size: large;
+        
+        &:hover {
+            background: $main-gradient-hover;
+        }
+    }
+}
+
+.PanierContainer::-webkit-scrollbar {
+    width: 7px;
+}
+
+/* Track */
+.PanierContainer::-webkit-scrollbar-track {
+    background: $main-color;
+}
+
+/* Handle */
+.PanierContainer::-webkit-scrollbar-thumb {
+    background: $main-gradient;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+.PanierContainer::-webkit-scrollbar-thumb:hover {
+    background: $main-gradient-hover;
+}

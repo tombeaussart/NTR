@@ -1,0 +1,23 @@
+.ProductPanierContainer{
+    background-color: $second-color;
+    border-radius: 4px;
+    width: 90%;
+    color: white;
+    margin: 2%;
+    padding: 1%;
+    display: flex;
+    padding: 2%;
+    align-items: center;
+    font-size: large;
+
+    img{
+        width: 60px;
+    }
+
+    .ProductInfos{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding-left: 2%;
+    }
+}

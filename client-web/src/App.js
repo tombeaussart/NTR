@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import List from "./components/List";
+import Panier from "./components/Panier";
 import "./style/index.scss";
 
 export const UserContext = React.createContext();
@@ -13,10 +14,11 @@ function App() {
     {id: 3, nom: "Pull Rouge", desc: "Un pull rouge 100% laine", prix: 30},
     {id: 4, nom: "Casquette Noire", desc: "Une casquette noire brodée", prix: 15}
   ]);
+  const [total, setTotal] = useState(0);
 
   return (
     <div className="app">
-      <UserContext.Provider value={{listProducts, panier, setPanier}}>
+      <UserContext.Provider value={{listProducts, panier, setPanier, setTotal, total}}>
         <div className="title">
           <div className="title-first" onClick={() => setPagePanier(false)}>
             Web<div className="title-second">Client</div>
@@ -28,6 +30,7 @@ function App() {
         </div>
         <div className="content">
           {!pagePanier && <List/>}
+          {pagePanier && <Panier/>}
         </div>
       </UserContext.Provider>
     </div>

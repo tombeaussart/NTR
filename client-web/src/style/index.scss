@@ -1,6 +1,8 @@
 @import './settings';
 @import './List/index';
 @import './List/Product/index';
+@import './Panier/index';
+@import './Panier/ProductPanier/index';
 
 #root {
     display: flex;
@@ -64,19 +66,14 @@
         color: white;
         font-size: x-large;
 
-        img{
+        img {
             width: 25px;
             height: auto;
             margin-left: 10%;
         }
 
-        &:hover{
+        &:hover {
             background: $main-gradient-hover;
         }
     }
-}
-
-.content {
-    height: 100%;
-    padding: 1%;
 }
