@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://www.NTR.fr/spring/gateway"
+            elementFormDefault="qualified">
+
+    <xsd:element name="CustomerAccount">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="id" type="xsd:int" />
+                <xsd:element name="name" type="xsd:string" />
+                <xsd:element name="firstname" type="xsd:string" />
+                <xsd:element name="email" type="xsd:string" />
+                <xsd:element name="balance" type="xsd:float" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="CustomerRequest">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="id" type="xsd:int" />
+                <xsd:element name="name" type="xsd:string" />
+                <xsd:element name="firstname" type="xsd:string" />
+                <xsd:element name="email" type="xsd:string" />
+                <xsd:element name="balance" type="xsd:float" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>
