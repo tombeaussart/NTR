@@ -24,7 +24,7 @@ public class ClientRessource extends CommonRessource {
     }
 
 
-    @PutMapping(params = {"id", "amount"})
+    @GetMapping(params = {"id", "amount"})
     public ResponseEntity<String> transaction(@RequestParam(name = "id") int id, @RequestParam(name = "amount") float amount) throws MyExecutionException {
         clientService.updateBalance(id, amount);
         return ResponseEntity

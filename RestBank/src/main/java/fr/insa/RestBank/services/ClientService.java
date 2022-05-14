@@ -14,7 +14,7 @@ public class ClientService {
     private ClientRepository clientRepository;
 
     public Client getClient(int id) {
-        return clientRepository.getById(id);
+        return clientRepository.getClientById(id);
     }
 
     public void updateBalance(int id, float amount) throws MyExecutionException {
