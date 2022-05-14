@@ -13,12 +13,10 @@ const Product = ({ dataProduct }) => {
 
     const handleClickMoins = () => {
         var arr = [...context.panier];
-        console.log(arr);
         let index = arr.indexOf(dataProduct.id);
         if (index > -1) {
             arr.splice(index, 1);
         }
-        console.log(arr);
         context.setPanier(arr);
         context.setTotal(context.total - dataProduct.prix);
     };

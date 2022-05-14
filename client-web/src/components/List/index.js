@@ -2,7 +2,7 @@ import React from 'react';
 import Product from './Product';
 import { UserContext } from '../../App';
 
-const List = () => {
+const List = ({}) => {
     const context = React.useContext(UserContext);
 
     return (

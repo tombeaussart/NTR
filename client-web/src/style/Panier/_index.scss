@@ -34,6 +34,26 @@
             background: $main-gradient-hover;
         }
     }
+
+    .error{
+        padding: 2%;
+        border-radius: 4px;
+        margin-top: 2%;
+        align-items: center;
+        background: rgb(255, 84, 84);
+        color: white;
+        font-size: medium;
+    }
+
+    .success{
+        padding: 2%;
+        border-radius: 4px;
+        margin-top: 2%;
+        align-items: center;
+        background: rgb(72, 167, 72);
+        color: white;
+        font-size: medium;
+    }
 }
 
 .PanierContainer::-webkit-scrollbar {
